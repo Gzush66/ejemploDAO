@@ -53,7 +53,7 @@ public class EmpleadoDAOFichero implements EmpleadoDAO{
 			  listaEmpleados.add(emp);
 			  
 			}
-			
+			lector.close();
 		} catch (FileNotFoundException e) {
 			
 			e.printStackTrace();
@@ -73,7 +73,7 @@ public boolean insertar(Empleado empleado) {
 	// TODO Auto-generated method stub
 
 	try {
-		FileWriter fichero = new FileWriter("empleados.csv", true);
+		FileWriter fichero = new FileWriter("prueba.csv", true);
 
 		fichero.write(empleado.getNombre() + "," + empleado.getApellido1() + "," +empleado.getApellido2() + ","+ empleado.getDni() + ","
 				+ empleado.getSueldo() + "\n");
